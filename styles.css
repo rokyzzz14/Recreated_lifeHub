@@ -1,0 +1,360 @@
+* {
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Arial', sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #9EDDFF;
+  display: block;
+  background-image: url('https://images.unsplash.com/photo-1528921471190-d3007de1b56b?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwxMTc3OTl8MHwxfGFsbHwxfHx8fHx8fHwxNjYxODgwNjg4&ixlib=rb-1.2.1&q=80&w=1080');
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+#container {
+  margin: 0px;
+  padding: 20px 250px;
+  background: rgba(255, 255, 255, 0.8);
+  border-radius: 10px;
+  width: 100%;
+}
+
+#container > h1,
+#container > h2 {
+  text-align: left;
+  opacity: 0; /* Mulai dengan teks tersembunyi */
+  animation: fadeIn 1s forwards; /* Animasi fade-in */
+  animation-delay: 0.5s; /* Delay untuk judul */
+}
+
+#container > h1 {
+  color: #007bff;
+  font-family: "Gowun Batang", serif;
+}
+
+#container > h3 {
+  font-size: 20px;
+  color: #000000;
+  align-items: flex-start;
+}
+
+
+nav {
+  position: sticky;
+  top: 0px;
+  background: linear-gradient(to right, #007bff, #00c6ff);
+  padding: 15px;
+  color: #fff;
+  text-align: center;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  display: flex;
+  align-items: center;
+  z-index: 1000;
+  transition: background 0.5s ease, padding 0.5s ease; /* Transisi untuk efek hover */
+  font-family: "Gowun Batang", serif;
+}
+nav.scrolled {
+  background: rgba(0, 123, 255, 0.9); /* Mengubah warna saat scroll */
+  padding: 10px; /* Mengurangi padding saat scroll */
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2); /* Menambah bayangan yang lebih jelas saat scroll */
+}
+
+h1 {
+  margin-right: auto;
+}
+
+nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-left: auto;
+}
+
+nav ul li {
+  margin: 0 15px;
+}
+
+nav ul li a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: bold;
+  padding: 5px 10px;
+  border-radius: 5px;
+  transition: background-color 0.3s ease, transform 0.3s ease; /* Transisi untuk perubahan warna dan efek transform */
+}
+
+
+nav ul li a:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+  transform: scale(1.1); /* Efek zoom saat hover */
+}
+
+
+nav ul li button {
+  padding: 8px 15px;
+  background-color: #ffffff;
+  color: #007bff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background-color 0.3s ease, transform 0.3s ease; /* Transisi untuk perubahan warna dan efek transform */
+}
+
+nav ul li button:hover {
+  background-color: #0056b3;
+  color: #ffffff;
+  transform: scale(1.05); /* Efek zoom saat hover */
+}
+
+.section-title p {
+  color: #6c757d;
+  text-align: left;
+}
+
+.row.align-items-center {
+  margin: 50px; 
+}
+
+.row.align-items-center {
+  margin: 0; 
+}
+
+.col-md-6 {
+  padding: 10px; 
+  display: flex; 
+  align-items: center; 
+  text-align: left; 
+  flex-direction: column; 
+}
+
+.col-md-6 p {
+  margin-top: 0px; 
+  opacity: 0; 
+  animation: fadeIn 2s forwards;
+  animation-delay: 2s; 
+}
+
+.img-fluid {
+  margin: 0 auto;
+  width: 100%; 
+  max-width: 100%; 
+  height: auto;
+  transform: scale(1); /* Mulai dengan ukuran normal */
+  transition: transform 0.3s ease; /* Transisi saat hover */
+}
+
+.img-fluid:hover {
+  transform: scale(1.05); /* Efek zoom saat hover */
+}
+
+.section-title {
+  color: #007bff;
+  margin-top: 40px;
+  text-align: center;
+}
+
+.subscribe-section {
+  background-color: #ffffff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  margin-top: 40px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  width: 100%;
+}
+
+.subscribe-section h2 {
+  color: #007bff;
+}
+
+.subscribe-section input[type="text"],
+.subscribe-section input[type="email"] {
+  width: 80%; /* Reduced size */
+  padding: 10px;
+  margin: 10px 0;
+  border: 1px solid #ced4da;
+  border-radius: 5px;
+  box-sizing: border-box;
+}
+
+.subscribe-section button {
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: #ffffff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 10px;
+  transition: background-color 0.3s ease, transform 0.3s ease; 
+}
+
+.subscribe-section button:hover {
+  background-color: #0056b3;
+  transform: scale(1.05); 
+}
+
+footer {
+  text-align: center;
+  margin-top: 40px;
+  padding: 10px 0;
+}
+
+.social-icons {
+  margin-top: 10px;
+}
+
+.social-icons a {
+  margin: 0 10px;
+  color: #007bff;
+  text-decoration: none;
+  font-size: 20px;
+  transition: color 0.3s ease;
+}
+
+.social-icons a:hover {
+  color: #0056b3;
+}
+
+@media (max-width: 600px) {
+  #container {
+      padding: 20px 15px; 
+  }
+
+  .image-section img {
+      max-width: 100%; 
+      margin-right: 0; 
+  }
+
+  .subscribe-section {
+      width: 90%; 
+  }
+}
+
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+ /* Animasi zoom-in */
+        .zoom-in {
+            opacity: 0; /* Awalnya tidak terlihat */
+            transform: scale(0.9); /* Ukuran sedikit lebih kecil */
+            transition: opacity 0.6s ease, transform 0.6s ease; /* Transisi untuk efek yang halus */
+        }
+
+        .zoom-in.visible {
+            opacity: 1; /* Menjadi terlihat */
+            transform: scale(1); /* Kembali ke ukuran normal */
+        }
+
+
+/* about css */
+
+
+.about-section {
+  background-color: rgba(255, 255, 255, 0.9);
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  margin: 50px 0;
+}
+
+.about-section h2 {
+  color: #007bff;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.about-section p {
+  color: #6c757d;
+  text-align: left;
+  line-height: 1.6;
+}
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+    background-image: none; /* Menghapus background default */
+}
+
+.carousel-control-prev-icon:before {
+    content: "\f053"; /* Ikon panah kiri dari FontAwesome */
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+    font-size: 2rem;
+}
+
+.carousel-control-next-icon:before {
+    content: "\f054"; /* Ikon panah kanan dari FontAwesome */
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+    font-size: 2rem;
+}
+
+.container2 {
+  display: flex;
+  justify-content: space-around;
+  width: 80%;
+  background: linear-gradient(to right, #f8f9fa, #e9ecef); /* Gradien latar belakang */
+  padding: 20px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  border-radius: 10px; /* Sudut membulat */
+  margin: 20px auto; /* Margin atas dan bawah */
+}
+
+.item {
+  text-align: center;
+  width: 30%;
+  align-items: center;
+  transition: transform 0.3s; /* Transisi untuk efek hover */
+}
+
+.item:hover {
+  transform: translateY(-5px); /* Efek mengangkat saat hover */
+}
+
+.item img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px; /* Sudut membulat pada gambar */
+}
+
+.item p {
+  font-size: 16px;
+  color: #333;
+  margin: 15px 0;
+}
+
+.item button {
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  border-radius: 5px; /* Sudut membulat pada tombol */
+}
+
+.item button:hover {
+  background-color: #0056b3;
+}
+
+#Contact {
+  text-align: center;
+}
+ #about > h2{
+  text-align: left;
+ }
